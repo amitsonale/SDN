@@ -28,7 +28,7 @@ def _handle_ConnectionUp(event):
     log.info("Switch %s connected", event.dpid)
 
 
-def _handle_PacketIn(event):
+def _handle_PacketIn(event):  //This function handles every packet that does not match any rule in the switch
     packet = event.parsed
     if not packet:
         return
